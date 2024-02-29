@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 100px !important;
+}
+
+.navbar, .logo h1{
+    color: white;
+    cursor: pointer;
+}
+
+.navbar, .menu{
+    display: flex;
+    column-gap: 30px;
+}
+
+.navbar, .menu a{
+    color: white;
+    text-decoration: none !important;
+    padding: 10px;  
+}
+
+.navbar, .menu .about{
+    color: cyan;
+}
+
+.menu a:hover{
+    border: 1px solid cyan;
+}
+
+.about-content {
+    padding: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-heading,
+.section-subheading {
+    color: #ffffff;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-panel {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #84c9c96a ;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(150, 170, 169, 0.174) 0px 54px 55px, rgba(149, 209, 209, 0.12) 0px -12px 30px, rgba(146, 185, 176, 0.12) 0px 4px 6px;
+}
+
+.timeline li:hover .timeline-panel {
+    background-color:#dbaad78e;
+    color:#111;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.timeline-panel h4,
+.timeline-panel p {
+    margin: 0;
+}
+
+.timeline-body p {
+    line-height: 1.6;
+}
+
+.timeline-panel h2 {
+    margin-bottom: 10px;
+}
+
+/* Additional hover effects */
+.timeline li:hover {
+    transform: scale(1.05);
+}
+
+.timeline-panel h2,
+.timeline-panel p {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.timeline li:hover .timeline-panel h2,
+.timeline li:hover .timeline-panel p {
+    opacity: 1;
+}
+
+/* media query*/
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 20px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
